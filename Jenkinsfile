@@ -20,7 +20,7 @@ pipeline {
             steps {
                 script {
                     // Build the Docker image and tag it with the specified tag
-                    sh "docker build -t ${DOCKER_IMAGE_NAME}:${DOCKER_IMAGE_TAG} go"
+                    sh "docker build -t ${DOCKER_IMAGE_NAME}:${DOCKER_IMAGE_TAG} ."
                 }
             }
         }
