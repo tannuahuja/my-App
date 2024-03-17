@@ -2,7 +2,7 @@ pipeline {
     agent any
     
     stages {
-        stage('Build and Push Go Docker Image') {
+        stage('Build and Push Nextjs Docker Image') {
             steps {
                 // Checkout the source code from the repository
                 checkout scm
