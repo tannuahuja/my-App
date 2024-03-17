@@ -19,11 +19,8 @@ pipeline {
         stage('Build Go Docker Image') {
             steps {
                 script {
-                    // Change directory to the 'go' folder
-                    dir('go') {
-                        // Build the Docker image and tag it with the specified tag
-                        sh "docker build -t ${DOCKER_IMAGE_NAME}:${DOCKER_IMAGE_TAG} ."
-                    }
+                    // Build the Docker image and tag it with the specified tag
+                    sh "docker build -t ${DOCKER_IMAGE_NAME}:${DOCKER_IMAGE_TAG} go"
                 }
             }
         }
